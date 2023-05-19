@@ -5,5 +5,13 @@ sys.stdin = open('input.txt')
 t = int(input())
 
 for tc in range(1, t+1):
-    n = int(input())
-    print(tc, n)
+    numbers = int(input())
+
+    answer = 0
+    for n in range(numbers+1):
+        if n % 2:
+            answer += n
+        else:
+            answer -= n
+
+    print(f'#{tc} {answer}')
