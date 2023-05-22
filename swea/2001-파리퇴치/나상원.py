@@ -1,8 +1,7 @@
 import sys
-sys.stdin = open(('./input.txt'))
+sys.stdin = open('./input.txt')
 
 T = int(input())
-
 
 def fly_catch(j, i):
     result = 0
