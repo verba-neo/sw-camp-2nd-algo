@@ -5,14 +5,14 @@ T = int(input())
 
 for tc in range(1, T+1):
     N = int(input())
-    a_ls = input()
+    card_ls = input()
 
-    a_dict = {card: a_ls.count(card) for card in a_ls}
+    card_dict = {card: card_ls.count(card) for card in card_ls}
 
     card_num_answer = 0
     count_answer = 0
 
-    for card_num, count in a_dict.items():
+    for card_num, count in card_dict.items():
 
         if count > count_answer:
             count_answer = count
