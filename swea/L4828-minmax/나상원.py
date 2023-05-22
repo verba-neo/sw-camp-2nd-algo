@@ -1,6 +1,7 @@
 import sys
 sys.stdin = open('./input.txt')
 
+
 T = int(input())
 
 for tc in range(1, T+1):
@@ -8,9 +9,6 @@ for tc in range(1, T+1):
     number = list(map(int, input().split()))
 
     answer = 0
-
-    # max_num = min_num = number[0]
-
     max_num = 0
     min_num = number[0]
 
@@ -24,4 +22,6 @@ for tc in range(1, T+1):
 
     answer = max_num - min_num
 
+
     print(f'#{tc} {answer}')
+
