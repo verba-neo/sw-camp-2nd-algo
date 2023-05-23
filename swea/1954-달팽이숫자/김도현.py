@@ -28,7 +28,12 @@ for t in range(1, T+1):
                     break
 
     print(f'#{t}')
+    # for a in answer:
+    #     for i in a:
+    #         print(i, end=' ')
+    #     print()
+
+    # 신박한 프린트 방법
     for a in answer:
-        for i in a:
-            print(i, end=' ')
-        print()
+        print(*a)
+    # 오오...

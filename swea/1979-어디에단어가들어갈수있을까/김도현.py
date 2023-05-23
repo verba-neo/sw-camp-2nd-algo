@@ -51,3 +51,8 @@ for t in range(1, T+1):
             # answer += zip_result
 
     print(f'#{t} {answer}')
+
+
+# 흰 칸의 갯수를 세어가면서 구하는 방법도 있음.
+# 흰 칸의 갯수가 N 보다 크면 X, 검은칸이 나오면 끝내고 카운트 체크
+# for 문을 체크하기 위해 한 번 해보자.

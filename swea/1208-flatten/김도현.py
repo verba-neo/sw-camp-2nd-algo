@@ -25,3 +25,6 @@ for t in range(1, 11):
     lowest = min(box_list)
 
     print(f'#{t} {highest - lowest}')
+
+    # sort 로 사용해서 푸는 방법도 있음.
+    # sort 가 시간복잡도가 더 많은 시간을 소요함.

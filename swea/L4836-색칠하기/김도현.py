@@ -26,3 +26,6 @@ for t in range(1, T+1):
 
     # print(grid)
     print(f'#{t} {answer}')
+
+
+# 1. set 을 이용해 교집합을 만들어 사용하는 방법
