@@ -28,5 +28,5 @@ for tc in range(1, T + 1):
             if len(colored[i][j]) == 2:
                 result += 1
 
-    print(f'{tc} {result}')
+    print(f'#{tc} {result}')
 
