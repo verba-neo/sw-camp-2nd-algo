@@ -19,22 +19,22 @@ for tc in range(1, T+1):
 
     count = 0
 
-    while True:
-        # A의 길이보다 idx가 길 경우 종료한다.
-        if idx >= len(A):
-
-            break
+    while idx < len(A):
 
         # A[idx] 부터 A[idx+len(B)]가 B이면 count += 1
-        elif A[idx: idx+len(B)] == B:
+        if A[idx: idx+len(B)] == B:
             count += 1
             idx += len(B)
+
         # B가 아니면 count += 1, idx += 1
         else:
             count += 1
             idx += 1
 
     print(f'#{tc} {count}')
+
+
+
 
 
 
