@@ -20,37 +20,42 @@
 # 가로, 세로 확인하기
 # ㅠㅜㅠㅜㅠㅜㅠㅜㅜㅠㅜㅠㅜㅠㅜㅠㅜㅠㅜ
 
+
+
+
 import sys
 
 sys.stdin = open('./input.txt')
 
 T = 10
 
-for tc in (1, T+1):
+for tc in range(1, T+1):
     input()
     # 글자판 letter board를 받아주고
     lb = [list(map(str, input().split())) for _ in range(100)]
 
     # 회문의 길이를 length라 할 때, 긴 길이의 회문부터 확인 할 것이므로 범위를 리버스
     for length in range(100, -1, -1):
+
+
         # 행은 0에서 99
         for row in range(100):
             # 열은 0에서 99 - length + 1
-            count = 0
-            for col in range(0, 100-length+1):
-                # row,col 에서 부터 row, col+length-1의 값이 같다면?
+
+            for col in range(0, 100-length + 1):
+                        # row,col 에서 부터 row, col+length-1의 값이 같다면?
                 if lb[row][col] == lb[row][col+length-1]:
-                    # 안의 내용들을 확인한다.
+                            # 안의 내용들을 확인한다.
+
                     for idx in range(1, length//2):  # 짝홀수 관계없는 이유가 홀수이면, 중간값이 어떤 수가 와도 상관이 없다.
                         if lb[row][col+idx] == lb[row][col+length-1-idx]:
-                            count += 1
+                                    count += 1
 
                         else:
-                            break
+                                reak
                 else:
                     break
 
-    print(count)
 
 
 
