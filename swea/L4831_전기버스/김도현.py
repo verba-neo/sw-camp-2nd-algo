@@ -13,7 +13,7 @@ for t in range(1, T+1):
     chrg_st.reverse()
 
     station = list(range(0, N+1))
-
+    print('c', chrg_st, 's', station)
     location = 0
     c_able = True
     while location < N and c_able == True:
@@ -23,15 +23,16 @@ for t in range(1, T+1):
         if c_able:
             c_able = False
             for c in chrg_st:
-                # print(c, station[location+1:location+K+1])
+                print(c, station[location+1:location+K+1])
                 if c in station[location+1:location+K+1]:
                     location = c
                     answer += 1
                     c_able = True
                     break
-        else:
-            answer = 0
-            break
+        # # else 가 없어도 될 것 같음.
+        # else:
+        #     answer = 0
+        #     break
 
     if not c_able:
         answer = 0

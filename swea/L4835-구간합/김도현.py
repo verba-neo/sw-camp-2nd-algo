@@ -34,7 +34,17 @@ for t in range(1, T+1):
         else:
             sumlist.append(sum(numbers[i:i+M]))
 
-    maxsum = max(sumlist)
-    minsum = min(sumlist)
+    # max_sum = max(sumlist)
+    # min_sum = min(sumlist)
 
-    print(f'#{t} {maxsum - minsum}')
+    # 이 max min도 L4828 과 같이 하나의 for 문으로 O(N) 으로 해결할 수 있다.
+    max_sum = -float('INF')
+    min_sum = float('INF')
+    for i in sumlist:
+        if i >= max_sum:
+            max_sum = i
+        # 여기서 elif i <= min_sum: 을 하면 첫번째 케이스가 -inf 가 나와버림.
+        if i <= min_sum:
+            min_sum = i
+
+    print(f'#{t} {max_sum - min_sum}')
