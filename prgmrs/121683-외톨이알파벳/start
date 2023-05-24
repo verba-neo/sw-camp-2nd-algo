@@ -1,1 +1,15 @@
 https://school.programmers.co.kr/learn/courses/15008/lessons/121683
+
+
+
+# 'de'
+print(solution("edeaaabbccd"))
+
+# 'e'
+print(solution("eeddee"))
+
+# 'N'
+print(solution("string"))
+
+# 'bz'
+print(solution("zbzbz"))
