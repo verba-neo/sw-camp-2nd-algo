@@ -4,6 +4,7 @@ sys.stdin = open('./input.txt')
 
 T = int(input())
 
+
 def bracket(text):
 
     stack = []

@@ -17,19 +17,19 @@
 # 10이들어가면 x1 20이들어가면 x2가 된다.
 
 # An-1 x1 과  An-2 x2가된다.
+import sys
+
+sys.stdin = open('./input.txt')
+
 
 def cases(n):
     if n == 1:
         return 1
-    elif n == 2 :
+    elif n == 2:
         return 3
 
     return cases(n-1) + 2 * cases(n-2)
 
-
-import sys
-
-sys.stdin = open('./input.txt')
 
 T = int(input())
 
