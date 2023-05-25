@@ -23,5 +23,4 @@ for tc in range(1, T + 1):
             if board[row][col] == 3:
                 pur_boxes += 1
 
-
     print(f'#{tc} {pur_boxes}')
