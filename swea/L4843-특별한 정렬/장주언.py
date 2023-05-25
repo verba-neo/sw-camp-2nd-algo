@@ -26,6 +26,7 @@ for tc in range(1, T+1):
         else:
             new_lst[idx] = origin_lst[idx//2]
     result = []
+
     for idx in range(10):
         result.append(new_lst[idx])
 
