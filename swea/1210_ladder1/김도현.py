@@ -4,7 +4,7 @@ sys.stdin = open('input.txt')
 for t in range(1, 11):
     t = input()
     grid = [[i for i in list(map(int, input().split()))] for _ in range(100)]
-
+    # print(grid)
     start_x = grid[99].index(2)
 
     d_x = [1, -1, 0]
