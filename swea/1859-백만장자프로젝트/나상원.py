@@ -1,11 +1,11 @@
 # import sys
-# sys.stdin = open('./input.txt')
+# sys.stdin = open('./start.txt')
 #
-# T = int(input())
+# T = int(start())
 #
 # for tc in range(1, T+1):
-#     N = int(input())
-#     M = list(map(int, input().split()))
+#     N = int(start())
+#     M = list(map(int, start().split()))
 #
 #     benefit = 0
 #     sale_idx = 0

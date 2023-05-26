@@ -63,7 +63,7 @@ for t in range(1, 11):
 
     # # 중복을 지워야하므로 set
     # answer = ['A', 'B', 'C']
-    # tpuzzle = [list(map(str, input())) for _ in range(100)]
+    # tpuzzle = [list(map(str, start())) for _ in range(100)]
     # tzip_puzzle = list(map(list, zip(*tpuzzle)))
     #
     # for index in range(100):
