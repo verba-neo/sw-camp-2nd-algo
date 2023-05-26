@@ -6,8 +6,8 @@ T = int(input())
 for t in range(1, T+1):
 
     answer = 0
-    # days = int(input())
-    # total_price_list = list(map(int, input().split()))
+    # days = int(start())
+    # total_price_list = list(map(int, start().split()))
     # idx = 0
     # while idx < len(total_price_list):
     #     price_list = total_price_list[idx:]

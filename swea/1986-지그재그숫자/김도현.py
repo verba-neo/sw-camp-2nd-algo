@@ -1,4 +1,4 @@
-# input.txt.txt  파일을 한줄씩 (stdin) 입력 (open)
+# start.txt.txt  파일을 한줄씩 (stdin) 입력 (open)
 import sys
 sys.stdin = open('input.txt')
 
