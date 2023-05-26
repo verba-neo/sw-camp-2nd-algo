@@ -1,1 +1,8 @@
 https://school.programmers.co.kr/learn/courses/15009/lessons/121687
+
+
+# [2, 2]
+print(solution('GRGLGRG'))
+
+# [2, 0]
+print(solution('GRGRGRB'))
