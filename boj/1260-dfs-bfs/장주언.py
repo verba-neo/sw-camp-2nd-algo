@@ -1,5 +1,4 @@
-def dfs(V):
-    pass
+def dfs():
     # dfs의 경로를 보여줘
     # 방문여부
     visited = [False for _ in range(N+1)]
@@ -21,8 +20,8 @@ def dfs(V):
     return ' '.join(map(str, route))
 
 
-def bfs(V):
-    # dfs의 경로를 보여줘
+def bfs():
+    # bfs의 경로를 보여줘
     # 방문여부
     visited = [False for _ in range(N + 1)]
     # 방문할 곳들
@@ -55,5 +54,5 @@ for _ in range(M):
     graph[start].append(end)
     graph[end].append(start)
 
-print(dfs(V))
-print(bfs(V))
+print(dfs())
+print(bfs())
