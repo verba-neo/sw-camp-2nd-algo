@@ -93,6 +93,7 @@ for line_no in range(N // 20 + 1):
     # for i in range(0, N, 20):
     #     print(' '.join(map(str, switches[i: i + 20])))
 
+# 부분집합 구하기!
 # from itertools import combinations # 조합 (순서 상관 X)
 # list(combinations(range(1, 13), 3))
 # # 다 더해 보고 220개 중 원하는 값 출력
