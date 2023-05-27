@@ -6,21 +6,15 @@ T = int(input())
 for tc in range(1, T+1):
     A, B = map(str, input().split())
 
-    typing_cnt = 0
-    including_cnt = 0
+    result_cnt = 0
+    in_cnt = 0
     char_idx = 0
 
-    for idx in range(len(A)-len(B)+1):
+    for c_idx in range(len(A)-len(B)+1):
         if A[char_idx:len(B)+char_idx] == B:
-            including_cnt += 1
-            char_idx = len(B) + char_idx - 1
+            in_cnt += 1
+            char_idx = len(B)+char_idx - 1
         char_idx += 1
+    result_cnt = len(A) - len(B)*in_cnt + in_cnt
 
-    typing_cnt = len(A) - len(B)*including_cnt + including_cnt
-
-    print(f'#{tc} {typing_cnt}')
-
-
-
-
-
+    print(f'#{tc} {result_cnt}')

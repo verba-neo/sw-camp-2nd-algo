@@ -1,7 +1,7 @@
 import sys
 sys.stdin = open('./input.txt')
 
-# T = int(input())
+# T = int(start())
 T = 10
 
 for tc in range(1, T+1):
@@ -11,11 +11,6 @@ for tc in range(1, T+1):
 
     end_row = N-1
     end_col = 0
-
-    d_rows = [0, 0, 1]
-    d_cols = [-1, 1, 0]
-
-    direction = 0
 
     for dep_idx in range(N):
         if game_board[N-1][dep_idx] == 2:
