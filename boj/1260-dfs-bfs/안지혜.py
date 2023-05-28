@@ -1,5 +1,5 @@
-# import sys
-# sys.stdin = open('input.txt')
+import sys
+sys.stdin = open('input.txt')
 
 N, M, V = map(int, input().split())
 connection_dict = {}
@@ -64,9 +64,25 @@ def dfs():
 
 
 def bfs():
-    pass
+    visited = {}
+    result = []
+    queue = []
+
+    queue.append(V)
+
+    while queue:
+        v = queue.pop(0)
+
+        if not visited.get(v):
+            visited.setdefault(v, True)
+            result.append(v)
+
+        for i in connection_dict[v]:
+            if not visited.get(i):
+                queue.append(i)
+
+    return result
 
 
-dfs_result = dfs()
-
-print(dfs_result)
+print(*dfs())
+print(*bfs())
