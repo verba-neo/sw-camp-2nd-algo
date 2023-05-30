@@ -1,5 +1,8 @@
-#
+# 요금 계산
+import math
 
+def total_fees(minutes, fees):
+    return fees[1] + math.ceil(max(minutes-fees[0]) / fee[2]) * fees[3]
 
 
 def solution(fees, records):
@@ -13,6 +16,8 @@ def solution(fees, records):
     park_in = {}
     # 이용시간
     using_time = {}
+
+
     for record in records:
         time, car, inout = record.split()
         # print(time, car, inout)
@@ -33,13 +38,16 @@ def solution(fees, records):
         if using_time[car]:
             using_time[car] += 23 * 60 + 59 - minutes
 
+    total = {K: 0 for k in car.sorted}
 
 
 
 
 
 
-    answer = []
+
+
+    answer = [total]
     return answer
 
 # [14600, 34400, 5000]
