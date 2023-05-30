@@ -26,3 +26,7 @@ for t in range(1, T+1):
 
 
     print(f'#{t} {answer}')
+
+
+    # 강사님의 풀이
+    # () 를 * 로 replace 하면 막대와 레이저를 구분하기 쉬워집니다. 😲!!
