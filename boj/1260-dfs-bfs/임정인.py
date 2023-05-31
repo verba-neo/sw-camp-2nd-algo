@@ -44,10 +44,10 @@ bfs(V)
 
 
 # 강사님 답안
-
 def dfs():  # 뒤에서부터 방문
-    visited =[False for _ in range(N+1)]
+    visited = [False for _ in range(N+1)]
     to_visits = [V]
+    # 방문 기록
     history = []  # 방문 순서 (방문 기록)
 
     while to_visits:
@@ -55,26 +55,25 @@ def dfs():  # 뒤에서부터 방문
         if not visited[current]:
             visited[current] = True
             history.append(current)
+            # 작은것부터 방문 => pop() 이므로 뒤에서부터 나옴 => 내림차순 정렬 필요
             to_visits += sorted(graph[current], reverse=True)  # 내림차순 4 3 2
-
     return history
 
 # .sort(메서드) : return 없이 기존 값 변경
 # sorted() : 함수, 기존 값 변경 후 return
 
-
 def bfs():
-    visited = [False for _ in range(N + 1)]
+    visited = [False for _ in range(N+1)]
     to_visits = [V]
     history = []
 
     while to_visits:
-        current = to_visits.pop()
+        current = to_visits.pop(0)
         if not visited[current]:
             visited[current] = True
             history.append(current)
-            to_visits += sorted(graph[current])  # 오름차순
-
+            # 작은것부터 방문 => pop(0) 이므로 앞에서부터 나옴 => 오름차순 정렬 필요
+            to_visits += sorted(graph[current])
     return history
 
 
@@ -82,7 +81,6 @@ def bfs():
 N, M, V = map(int, input().split())
 
 graph = [[] for _ in range(N+1)]  # 0 지울거니까 0 다음거까지 해서 N+1
-
 
 for _ in range(M):
     start, end = map(int, input().split())
