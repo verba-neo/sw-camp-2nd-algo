@@ -11,14 +11,10 @@ def solution(number, target):
 
     while stack:
         tmp = stack.pop(0)
-
     return
 
 
-input_numbers = [1, 1, 1, 1, 1]
-input_target = 3
-
-# input_numbers = [4, 1, 2, 1]
-# input_target = 4
-
-print(solution(input_numbers, input_target))
+# 5
+print(solution([1, 1, 1, 1, 1], 3))
+# 2
+print(solution([4, 1, 2, 1], 4))
