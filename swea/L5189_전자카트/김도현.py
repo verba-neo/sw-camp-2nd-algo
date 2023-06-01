@@ -36,4 +36,3 @@ for t in range(1, T+1):
             min_waste = total
 
     print(f'#{t} {min_waste}')
-    
