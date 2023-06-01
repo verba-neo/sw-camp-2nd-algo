@@ -9,6 +9,7 @@ direction = 0
 
 from collections import deque
 
+# 테스트 케이스 확인 잘 합시다🙂
 for t in range(1, T+1):
     answer = 0
     N = int(input())
