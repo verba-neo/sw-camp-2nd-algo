@@ -4,8 +4,13 @@ def solution(gems):
     gems_set_size = len(set(gems))
     gems_slic = [1, len(gems)]
 
+<<<<<<< HEAD
     for slice_idx in range(len(gems)):
         for idx in range(len(gems)-gems_set_size-1, len(gems)):
+=======
+    for slice_idx in range(len(gems)-gems_set_size+1):
+        for idx in range(slice_idx+gems_set_size, len(gems)+1):
+>>>>>>> 18eaa442434aae5d7fc1de0228bbb779e04ff92d
             pick_gems = gems[slice_idx:idx]
             if len(set(gems[slice_idx:idx])) == gems_set_size and len(pick_gems) < minimum:
                 minimum = len(pick_gems)
