@@ -3,15 +3,21 @@
 def solution(number, target):
 
     answer = 0
-    stack = []
-    idx = 0
-    stack.append(number[idx])
-    stack.append(-number[idx])
-    num_len = len(number)
 
-    while stack:
-        tmp = stack.pop(0)
-    return
+    def dfs(tmp_sum, idx):
+        nonlocal answer
+        if tmp_sum == target and len(number)-1 == idx:
+            answer += 1
+            return
+        elif len(number)-1 == idx:
+            return
+        dfs(tmp_sum+number[idx+1], idx+1)
+        dfs(tmp_sum-number[idx+1], idx+1)
+
+    dfs(number[0], 0)
+    dfs(-number[0], 0)
+
+    return answer
 
 
 # 5
