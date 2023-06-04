@@ -27,8 +27,8 @@ def solution(numbers, target):
             if num == target:
                 answer += 1
         else:
-            dfs(idx+1, num + numbers[idx])
-            dfs(idx+1, num - numbers[idx])
+            dfs(idx+1, num+numbers[idx])
+            dfs(idx+1, num-numbers[idx])
 
     dfs(0, 0)
     return answer
