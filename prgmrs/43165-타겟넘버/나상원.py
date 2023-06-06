@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+def dfs(numbers, target, idx, values):
+    global answer
+
+    if idx == len(numbers) and values == target:
+        answer += 1
+        return
+    elif idx == len(numbers):
+        return
+
+    dfs(numbers, target, idx+1, values + numbers[idx])
+    dfs(numbers, target, idx+1, values - numbers[idx])
+=======
 def dfs(numbers_list, target, idx, value):
     global answer
 
@@ -10,6 +23,7 @@ def dfs(numbers_list, target, idx, value):
 
     dfs(numbers_list, target, idx+1, value + numbers_list[idx])
     dfs(numbers_list, target, idx+1, value - numbers_list[idx])
+>>>>>>> 18eaa442434aae5d7fc1de0228bbb779e04ff92d
 
 
 def solution(numbers, target):
@@ -19,7 +33,10 @@ def solution(numbers, target):
 
     return answer
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 18eaa442434aae5d7fc1de0228bbb779e04ff92d
 # 5
 print(solution([1, 1, 1, 1, 1], 3))
 
