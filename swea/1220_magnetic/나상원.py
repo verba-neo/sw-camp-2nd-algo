@@ -9,19 +9,14 @@ for tc in range(1, T+1):
     table = [list(map(int, input().split())) for _ in range(size)]
 
     count = 0
-
-    for col in range(size):
-        flag = 0
-        for row in range(size):
-            if table[row][col] == 1:
-                if flag == 0 or flag == 2:
-                    flag = 1
-            elif table[row][col] == 2:
-                if flag == 1:
-                    flag = 2
-                    count += 1
-            else:
-                if flag == 2:
-                    flag = 0
+    for col in range(size):  # 열 탐색
+        stack = []
+        row = 0
+        while row < size:
+            if not stack and table[row][col] == 1:  # 스택이 비어있고, 값이 1이면 넣고
+                stack.append(1)
+            elif stack and table[row][col] == 2:  # 스택이 남아있고, 값이 2이면 pop 하고 값 더하기
+                count += stack.pop()
+            row += 1 ## row 인덱스 증가
 
     print(f'#{tc} {count}')
