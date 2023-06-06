@@ -11,7 +11,7 @@ def dfs(idx, row, col, number):
 
     number += board[row][col]
 
-    if idx == 6:
+    if len(number) == 7:
         answer.append(number)
         return
     for direction in range(4):
