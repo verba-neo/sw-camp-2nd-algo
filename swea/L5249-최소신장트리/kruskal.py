@@ -31,10 +31,11 @@ def union(x, y):
     elif ranks[px] < ranks[py]:
         # px 의 대장은 py
         parents[px] = py
-    # 랭크가 같으면 더 작은 값이 대장
+    # 랭크가 같으면 아무나 대장
     else:
-        py의 대장은 px
+        # py의 대장은 px
         parents[py] = px
+        # 식구가 늘었으니 rank + 1
         ranks[px] += 1
     """
 
